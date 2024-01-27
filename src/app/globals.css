@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  overflow-x:hidden ;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: red; */
+}
+
+/* @media (prefers-color-scheme: dark) {
+   body{
+    background-color: grey;
+   }
+} */
+
+/* @media (prefers-color-scheme: light) {
+   body{
+    background-color: red;
+   }
+} */
+
+@media only screen and (max-width:768) {
+  body{
+    width: 100vh;
+    overflow-x:hidden ;
+  }
+}
+
+
+.image-main{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: red;
+}
+.items{
+  padding: 10px;
+}
+
+.loader{
+  height: 50px;
+  width: 50px;
+  border-top: 5px solid gray ;
+  border-radius: 50%;
+  animation: loading 1s linear infinite ;
+}
+
+
+@keyframes loading{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg)}
+}
+
